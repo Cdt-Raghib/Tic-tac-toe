@@ -1,0 +1,52 @@
+#:import SetStyle settingsfonts.SetStyle
+#:import MySettings settings.MySettings
+#:import Factory kivy.factory.Factory
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import GridSettings settingsgrid.GridSettings
+
+<MySettings>:
+	auto_dismiss: False
+	title: 'Settings'
+
+	BoxLayout:
+		orientation: 'vertical'
+		Accordion:
+			orientation: 'vertical'
+			AccordionItem:
+				title: 'Styles'
+				SetStyle:
+					id: stylesetting
+			
+			AccordionItem:
+				title: 'Grids'
+
+				GridSettings:
+					id:gridsettings
+
+
+		
+		BoxLayout:
+			size_hint: 1, 0.1
+			background_normal: ''
+			background_color: 116,116,116
+			spacing: '10dp'
+			padding: '10dp'
+			
+			Button:
+				text: 'Save'
+				size_hint: 0.4,1
+				on_press: root.saveSettings([gridsettings, stylesetting], root.instance)
+				
+			Button:
+				text: 'Close'
+				size_hint: 0.4,1
+				on_press: root.dismiss()
+			
+<Box>:	
+	Button:
+		text: 'Settings'
+		size_hint: None, None
+		size: '120dp', '70dp'
+		pos_hint: {'center_x':0.5}
+		on_press: root.openSettings(MySettings(root)) if not root.settings_init else root.openSettings()
+			
