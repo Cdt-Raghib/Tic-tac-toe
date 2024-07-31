@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = My Application
+title = Tic Tac Toe
 
 # (str) Package name
-package.name = myapp
+package.name = com.tictactoe0.1
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
