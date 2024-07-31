@@ -1,0 +1,45 @@
+#:set optheight dp(50) 
+#:import VariableLabel extras.VariableLabel
+
+<OptionText@Label>
+    size_hint: 0.8,None
+    height: dp(20)
+    halign: 'left'
+
+<GridSettings>
+    cols: 2
+    padding: dp(15)
+    spacing: dp(10)
+
+    OptionText:
+        text: "Grid dimension"
+    
+    Spinner:
+        id: dimension
+        text: "3x3"
+        size_hint: 0.3, None
+        height: optheight
+        values: ['3x3','4x4','5x5']
+    
+    OptionText:
+        text: 'Match consecutive'
+        disabled: True
+    
+    VariableLabel:
+        id: match_cons
+        min: 3
+        max: 5
+        value: 3
+        size_hint: 0.3, None
+        height: optheight
+        disabled: True
+            
+    OptionText:
+        text: 'Three player mode'
+        height: optheight
+        disabled: True
+    
+    CheckBox:
+        disabled: True
+        height: optheight
+        size_hint: 0.3, None
