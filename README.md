@@ -9,4 +9,4 @@ Simple tic tac toe app with kivy and python
 - [ ] Three players mode
 - [ ] Match consecutive
 
-Please support development by pulling request and letting me know the issues. Thank you. [^1]
+[Please support development by pulling request and letting me know the issues. Thank you.]
