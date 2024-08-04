@@ -1,22 +1,17 @@
 import kivy
 from kivy.app import App
-from kivy.factory import Factory
 from kivy.lang import Builder
 from kivy.properties import StringProperty, ObjectProperty
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.gridlayout import GridLayout
-from kivy.lang import Builder
 from kivy.clock import Clock
 from kivy.core.window import Window
 #from kivy.uix.settings import Settings
-from functools import partial
 import numpy as np
-import time
 
 from bingobox import BingoBox
-from globvar import set #depricated
 
 class GlobalVar:
 	main_instance = ObjectProperty()
