@@ -1,5 +1,5 @@
 [app]
-
+#This is failing in apk build, so it is no more to be used
 # (str) Title of your application
 title = Tic Tac Toe
 
