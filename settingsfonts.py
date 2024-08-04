@@ -1,17 +1,12 @@
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.checkbox import CheckBox
-from kivy.properties import StringProperty,ObjectProperty
+from kivy.properties import StringProperty
 from kivy.uix.label import Label
-from kivy.factory import Factory
 
 import os
 
-#from globvar import main_instance
-
 class InstCheckBox(CheckBox):
-	func = ObjectProperty()
 	name = StringProperty()
-	target = ObjectProperty()
 	
 	def __init__(self, bind, name='', **kwargs):
 		super().__init__(**kwargs)
